@@ -83,7 +83,13 @@ cd ~ # te lleva al directorio de inicio.
 
 ## 5. Redirección de Flujos de Datos
 
+Cuando un programa o comando escribe el resultado de su ejecución en el monitor, está usando la `salida estándar`, en inglés `standard output` o `stdout`. A esto se le llama `stream` o `flujo de datos` o `canal de datos`. De igual forma, los datos de entrada a un programa o comando se suelen pasar por la `entrada estándar`, en inglés `standard input` o `stdin`. Cuando un programa o comando escribe un `mensaje de error` en el monitor, lo hace a través de otro canal de datos conocido como `error estándar`, en inglés `standard error` o `stderr`.
+
 ![Flujo de datos](https://linuxhandbook.com/content/images/2020/06/Linux-redirection-normal-flow.png)
+
+Cada uno de los flujos de datos vistos tiene asociado un número que se conoce como descriptor de archivo. Este descriptor es un índice en la tabla de descriptores que el sistema operativo utiliza para acceder a dichos flujos y archivos que se encuentran abiertos en un instante de tiempo. La entrada estándar tiene asociado el número `0`, la salida estándar el valor `1` y el error estándar el índice `2`.
+
+Una característica verdaderamente poderosa del shell es la capacidad de redirigir la entrada y salida de comandos hacia y desde otros comandos y archivos. Para permitir que los comandos puedan unirse mediante sus entradas y salidas, el shell utiliza metacaracteres. Un metacarácter es un carácter escrito que tiene un significado especial para el shell para conectar comandos o solicitar expansión. Los metacaracteres incluyen el carácter de barra vertical (|), ampersand (&), punto y coma (;), paréntesis derecho ()), paréntesis izquierdo ((), signo menor que (<) y signo mayor que (>).
 
 ### 5.1 Redirección de Salida Estándar
 
@@ -103,7 +109,6 @@ Cuando se adicionan los resultados, los nuevos resultados se agregan al final de
 ```bash
 $ comando 2> archivoError
 ```
-
 Donde el valor 2 indica el descriptor del error estándar.
 
 ### 5.1 Redirección de Entrada Estándar
@@ -125,6 +130,9 @@ El metacarácter de tubería, barra vertical (|), conecta la salida de un comand
 ```bash
 $cat /etc/passwd | sort | head -n 5
 ```
+
+![Ejecución de comandos: Estructuras de control](https://procomsys.wordpress.com/wp-content/uploads/2018/05/escon.png)
+
 
 ### 6.2 Ejecución secuencial de comandos
 
