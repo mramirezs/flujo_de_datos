@@ -183,7 +183,7 @@ $ cat > entrada
 
 # Lee información del teclado, hasta que se introduce una línea con END; copia todo al archivo entrada.
 
-$cat << END \> entrada
+$cat << END > entrada
 
 # Redirige la salida estándar del comando al archivo salida y la salida de error al archivo error.
 
