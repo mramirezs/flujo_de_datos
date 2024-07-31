@@ -1,4 +1,4 @@
-# flujo_de_datos
+# Flujo de datos
 
 ## Saberes previos
 
@@ -49,7 +49,7 @@ Un metacaracter es un carácter escrito que tiene un significado especial para e
 
 * La mayoría de los programas de línea de comando que muestran sus resultados lo hacen enviándolos a la salida estándar. De forma predeterminada, la salida estándar dirige su contenido a la pantalla. Para redirigir la salida estándar a un archivo, se utiliza el metacarácter mayor «>».
 
-´´´
+´´´{}
 $ ls > file_list.txt
 ´´´
 
