@@ -278,9 +278,9 @@ La representación octal (base ocho en lugar de base decimal) de los permisos es
 
 El valor del permiso para cada grupo expresado en octal es igual a la suma de los permisos que se otorgan sobre el archivo. En la Tabla podemos observar la equivalencia entre los permisos y su valor en octal.
 
-| Figura 4
+![Manejo de permisos](https://xunilinux.wordpress.com/wp-content/uploads/2016/02/3.jpg)
 
-| Figura 5
+![Estructura de permisos](https://naps.com.mx/blog/wp-content/uploads/2016/02/Permisos-en-sistema-de-archivos.jpg)
 
 ### 7.6 Ejemplos
 
