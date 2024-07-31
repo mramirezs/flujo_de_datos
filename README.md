@@ -29,7 +29,7 @@ Un metacaracter es un carácter escrito que tiene un significado especial para e
 | `?`          | Coincide con un solo carcter. |
 | `[]`         | Coincide con uno de los caracteres dentro de los corchetes. |
 | `{}`         | Expande una lista de elementos. |
-| `\|`          | Conecta la salida de un comando con la entrada de otro (tubería). |
+| `\|`         | Conecta la salida de un comando con la entrada de otro (tubería). |
 | `>`          | Redirecciona la salida estándar a un archivo.    |
 | `>>`         | Añade la salida estándar a un archivo sin sobrescribirlo. |
 | `<`          | Redirecciona la entrada estándar desde un archivo. |
@@ -37,7 +37,7 @@ Un metacaracter es un carácter escrito que tiene un significado especial para e
 | `&`          | Ejecuta un comando en segundo plano.            |
 | `;`          | Separa comandos para ejecución secuencial.      |
 | `&&`         | Ejecuta el siguiente comando solo si el anterior fue exitoso. |
-| `||`         | Ejecuta el siguiente comando solo si el anterior falló. |
+| `\|\|`       | Ejecuta el siguiente comando solo si el anterior falló. |
 | `!`          | Ejecuta comandos anteriores o niega una condición. |
 | `~`          | Representa el directorio de inicio del usuario. |
 
