@@ -2,7 +2,7 @@
 
 ## 1. Introducción
 
-Este documento explica conceptos fundamentales sobre la manipulación de flujos de datos en sistemas operativos, incluyendo la redirección de entrada/salida estándar, el uso de tuberías, y la gestión de permisos de archivos.
+Explicaremos conceptos fundamentales sobre la manipulación de flujos de datos en sistemas operativos, incluyendo la redirección de entrada/salida estándar, el uso de tuberías, y la gestión de permisos de archivos.
 
 ## 2. Saberes Previos
 
@@ -19,12 +19,16 @@ Este documento explica conceptos fundamentales sobre la manipulación de flujos 
 
 ## 4. Metacaracteres en Shell
 
-Los metacaracteres son caracteres especiales que el shell interpreta de manera particular para realizar tareas como redireccionar flujos de datos o conectar comandos.
+Un metacaracter es un carácter escrito que tiene un significado especial para el shell que se usa para conectar comandos, realizar búsquedas específicas, etc.
 
 ### Tabla de Metacaracteres
 
 | Metacaracter | Descripción                                      |
 |--------------|--------------------------------------------------|
+| `*`          | Coincide con cero o más caracteres. |
+| `?`          | Coincide con un solo carcter. |
+| `[]`         | Coincide con uno de los caracteres dentro de los corchetes. |
+| `{}`         | Expande una lista de elementos. |
 | `|`          | Conecta la salida de un comando con la entrada de otro (tubería). |
 | `>`          | Redirecciona la salida estándar a un archivo.    |
 | `>>`         | Añade la salida estándar a un archivo sin sobrescribirlo. |
@@ -34,6 +38,8 @@ Los metacaracteres son caracteres especiales que el shell interpreta de manera p
 | `;`          | Separa comandos para ejecución secuencial.      |
 | `&&`         | Ejecuta el siguiente comando solo si el anterior fue exitoso. |
 | `||`         | Ejecuta el siguiente comando solo si el anterior falló. |
+| `!`          | Ejecuta comandos anteriores o niega una condición. |
+| `~`          | Representa el directorio de inicio del usuario. |
 
 ## 5. Redirección de Flujos de Datos
 
