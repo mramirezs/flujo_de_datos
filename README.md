@@ -121,7 +121,7 @@ $cat /etc/passwd | sort | head -n 5
 En este tipo de ejecución, en lugar de escribir los comandos uno tras otro y esperar el fin de su ejecución antes de ejecutar el siguiente, es posible encadenar varios comandos en la misma orden, separándolos por un punto y coma (;).
 
 ```bash
-$comando1;comando2;comando3
+$ comando1;comando2;comando3
 ```
 
 En el encadenamiento comando1; comando2; comando3, el comando comando2 se ejecuta al terminar el comando comando1; igualmente, el comando3 se ejecuta cuando comando2 ha terminado. No hay ningún vínculo entre estos tres comandos; es decir, la ejecución de un comando no está condicionada por el resultado o código de retorno del anterior.
@@ -133,13 +133,13 @@ Al igual que en la ejecución secuencial, podemos ejecutar varios comandos en la
 **Operador lógico Y (&&):** En este tipo de ejecución, si queremos que el siguiente comando se ejecute, el comando anterior ha de finalizar exitosamente. Los comandos deberán ir separados por el operador AND lógico que se representa con dos signos ampersand (&&).
 
 ```bash
-$comando1 && comando2 && comando3 &&...&& comandoN
+$ comando1 && comando2 && comando3 &&...&& comandoN
 ```
 
 **Operador lógico O (||):** En este tipo de ejecución, si queremos que el siguiente comando se ejecute, el comando anterior no ha de finalizar exitosamente. Los comandos deberán ir separados por el operador OR lógico, que se representa por dos barras verticales (||). La sintaxis genérica para este tipo de ejecución es la siguiente:
 
 ```bash
-$comando1 || comando2 || comando3 ||...|| comandoN 
+$ comando1 || comando2 || comando3 ||...|| comandoN 
 ```
 
 En el encadenamiento comando1 || comando2 || comando3, el comando2 se ejecutará solo si el comando 1 no fue exitoso e igualmente, comando3 se ejecutará si el comando2 no fue exitoso. Por ejemplo, supongamos que verificamos si el archivo miarchivo.txt existe, y si no existe, lo creamos. Para hacerlo, podemos ejecutar el siguiente comando:
@@ -222,19 +222,19 @@ Cada archivo en Linux queda identificado por 10 caracteres a los que se les deno
 
 El primer carácter de un archivo puede ser:
 
-- `-` Archivo
-- `d` Directorio
-- `b` Archivo especial de bloques
-- `c` Archivo especial de caracteres
-- `l` Archivo de Enlace Simbólico
-- `p` Archivo especial de cauce o tubería (pipe)
+- `-`: Archivo
+- `d`: Directorio
+- `b`: Archivo especial de bloques
+- `c`: Archivo especial de caracteres
+- `l`: Archivo de Enlace Simbólico
+- `p`: Archivo especial de cauce o tubería (pipe)
 
 Los siguientes nueve caracteres son los permisos que se les concede a los usuarios en general del sistema. Los primeros tres caracteres se refieren a los permisos del propietario, los siguientes tres corresponden al grupo y los últimos tres caracteres son los permisos para el resto de los usuarios. Los caracteres que definen estos permisos son los siguientes:
 
-- `-` Sin permiso
-- `r` Permiso de lectura (**r**ead)
-- `w` Permiso de escritura (**w**rite)
-- `x` Permiso de ejecución (e**x**ecution)
+- `-`: Sin permiso
+- `r`: Permiso de lectura (**r**ead)
+- `w`: Permiso de escritura (**w**rite)
+- `x`: Permiso de ejecución (e**x**ecution)
 
 Existen diferencias en las acciones que se permiten dependiendo de si se trata de un archivo o de un directorio. 
 
