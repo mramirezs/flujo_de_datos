@@ -73,6 +73,14 @@ comando1 || comando2
 cd ~ # te lleva al directorio de inicio.
 ```
 
+| Comando            | file1.txt | file2.txt | file33.txt | fileA.txt | fileC.zip | fileB.txt | Output.pdf |
+|--------------------|-----------|-----------|------------|-----------|-----------|-----------|------------|
+| $ ls file*         |           |           |            |           |           |           |            |
+| $ ls file?.txt     |           |           |            |           |           |           |            |
+| $ ls file[AC].???  |           |           |            |           |           |           |            |
+| $ ls file[A-C].??? |           |           |            |           |           |           |            |
+| $ ls *.*.txt       |           |           |            |           |           |           |            |
+
 ## 5. Redirección de Flujos de Datos
 
 ### 5.1 Redirección de Salida Estándar
