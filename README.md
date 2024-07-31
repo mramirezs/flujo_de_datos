@@ -41,6 +41,13 @@ Un metacaracter es un carácter escrito que tiene un significado especial para e
 | `!`          | Ejecuta comandos anteriores o niega una condición. |
 | `~`          | Representa el directorio de inicio del usuario. |
 
+### Ejemplos
+
+```bash
+*.txt encuentra todos los archivos con extensión `.txt`
+?.txt encuentra archivos como `a.txt` o `b.txt`
+```
+
 ## 5. Redirección de Flujos de Datos
 
 ### 5.1 Redirección de Salida Estándar
