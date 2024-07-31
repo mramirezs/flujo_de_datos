@@ -44,8 +44,33 @@ Un metacaracter es un carácter escrito que tiene un significado especial para e
 ### Ejemplos
 
 ```bash
-*.txt encuentra todos los archivos con extensión `.txt`
-?.txt encuentra archivos como `a.txt` o `b.txt`
+*.txt # encuentra todos los archivos con extensión `.txt`.
+
+?.txt # encuentra archivos como `a.txt` o `b.txt`.
+
+[abc].txt # encuentra `a.txt`, `b.txt` y `c.txt`.
+
+file{1,2,3}.txt # genera `file1.txt`, `file2.txt` y `file3.txt`.
+
+ls -l | grep "archivo" # muestra detalles de los archivos cuyo nombre contiene "archivo".
+
+echo "hola" > archivo.txt # escribe "hola" en `archivo.txt`.
+
+echo "mundo" >> archivo.txt # añade "mundo" al final de `archivo.txt`.
+
+sort < archivo.txt # ordena el contenido de `archivo.txt`.
+
+comando & # ejecuta `comando` en segundo plano.
+
+comando1;comando2 # ejecuta `comando1` y luego `comando2`.
+
+comando1 && comando2
+
+comando1 || comando2
+
+!comando # ejecuta el comando anterior que no es `comando`.
+
+cd ~ # te lleva al directorio de inicio.
 ```
 
 ## 5. Redirección de Flujos de Datos
