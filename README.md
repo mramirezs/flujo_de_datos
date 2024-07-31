@@ -49,9 +49,9 @@ Un metacaracter es un carácter escrito que tiene un significado especial para e
 
 * La mayoría de los programas de línea de comando que muestran sus resultados lo hacen enviándolos a la salida estándar. De forma predeterminada, la salida estándar dirige su contenido a la pantalla. Para redirigir la salida estándar a un archivo, se utiliza el metacarácter mayor «>».
 
-´´´{}
+```
 $ ls > file_list.txt
-´´´
+```
 
 * En este ejemplo, se ejecuta el comando ls y los resultados se escriben en un archivo llamado file_list.txt. Dado que la salida de ls se redirigió al archivo, no aparecen resultados en la pantalla. Cada vez que se repite el comando anterior, file_list.txt se sobrescribe con la salida del comando ls.
 
