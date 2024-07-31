@@ -57,17 +57,17 @@ $ ls > file_list.txt
 
 * Para que los nuevos resultados se agreguen al archivo, usamos los símbolos mayor mayor «>>».
 
-´´´
+```
 $ ls >> file_list.txt
-´´´
+```
 
 * Cuando se adicionan los resultados, los nuevos resultados se agregan al final del archivo, lo que hace que el archivo sea más largo cada vez que se repite el comando. 
 
 * Si al ejecutar un comando se produce un error, dicho error por defecto también se mostrará en la pantalla, pero podemos redirigir estos mensajes a un archivo usando:
 
-´´´
+```
 $ comando 2> archivoError
-´´´
+```
 
 * Donde el valor 2 indica el descriptor del error estándar
 
@@ -77,9 +77,9 @@ $ comando 2> archivoError
 
 * Para redirigir la entrada estándar de un archivo en lugar del teclado se utiliza el símbolo menor «<».
 
-´´´
+```
 $ sort > file_list.txt
-´´´
+```
 
 * En este ejemplo, usamos el comando sort para procesar el contenido del archivo file_list.txt. El resultado se muestra en la pantalla, ya que no se redirigió la salida estándar. Además, es posible redirigir la salida estándar a otro archivo.
 
@@ -91,9 +91,9 @@ $ sort > file_list.txt
 
 * Esto permite que un comando trabaje con algunos datos y luego el siguiente comando trabaje sobre los resultados del comando anterior sin necesidad de almacenar resultados intermedios en el sistema de archivos.
 
-´´´
+```
 $cat /etc/passwd | sort | head -n 5
-´´´
+```
 
 | Figura 3
 
@@ -101,9 +101,9 @@ $cat /etc/passwd | sort | head -n 5
 
 * En este tipo de ejecución, en lugar de escribir los comandos uno tras otro y esperar el fin de su ejecución antes de ejecutar el siguiente, es posible encadenar varios comandos en la misma orden, separándolos por un punto y coma (;).
 
-´´´
+```
 $comando1;comando2;comando3
-´´´
+```
 
 En el encadenamiento comando1; comando2; comando3, el comando comando2 se ejecuta al terminar el comando comando1; igualmente, el comando3 se ejecuta cuando comando2 ha terminado. No hay ningún vínculo entre estos tres comandos; es decir, la ejecución de un comando no está condicionada por el resultado o código de retorno del anterior.
 
@@ -113,79 +113,79 @@ En el encadenamiento comando1; comando2; comando3, el comando comando2 se ejecut
 
 * Operador lógico Y (&&): En este tipo de ejecución, si queremos que el siguiente comando se ejecute, el comando anterior ha de finalizar exitosamente. Los comandos deberán ir separados por el operador AND lógico que se representa con dos signos ampersand (&&).
 
-´´´
+```
 $comando1 && comando2 && comando3 &&...&& comandoN
-´´´
+```
 
 * Operador lógico O (||): En este tipo de ejecución, si queremos que el siguiente comando se ejecute, el comando anterior no ha de finalizar exitosamente. Los comandos deberán ir separados por el operador OR lógico, que se representa por dos barras verticales (||). La sintaxis genérica para este tipo de ejecución es la siguiente:
 
-´´´
+```
 $comando1 || comando2 || comando3 ||...|| comandoN 
-´´´
+```
 
 * En el encadenamiento comando1 || comando2 || comando3, el comando2 se ejecutará solo si el comando 1 no fue exitoso e igualmente, comando3 se ejecutará si el comando2 no fue exitoso.
 
 * Por ejemplo, supongamos que verificamos si el archivo miarchivo.txt existe, y si no existe, lo creamos. Para hacerlo, podemos ejecutar el siguiente comando:
 
-´´´
+```
 $ [-f ~/miarchivo.txt] || touch ~/miarchivo.txt 
-´´´
+```
 
 * También podemos combinar varios operadores en el mismo comando. Por ejemplo, si el archivo miarchivo.txt existe, mostraremos un mensaje indicando que el archivo existe y en caso de que no exista, crearemos el archivo.
 
-´´´
+```
 $[ -f ~/miarchivo.txt ] && echo “El archivo miarchivo.txt existe” || touch ~/miarchivo.txt
-´´´
+```
 
 ### Ejemplos
 
 * Crea el archivo "lista" con la salida del comando ls -l.
 
-´´´
+```
 $ ls -l > lista
-´´´
+```
 
 * Añade al archivo lista el contenido del directorio /etc.
 
-´´´
+```
 $ls -l /etc >> lista  
-´´´
+```
 
 * Muestra el contenido de lista página a página.
 
-´´´
+```
 $cat < lista | more 
-´´´
+```
 
 * Envía los mensajes de error al dispositivo nulo (a la basura).
 
-´´´
+```
 $ls /NoEsta 2> /dev/null 
-´´´
+```
 
 * Crear un archivo kk vacío
 
-´´´
+```
 $ > kk
-´´´
+```
 
 * Lee información del teclado, hasta que se teclea Ctrl-D; copia todo al archivo entrada.
 
-´´´
+```
 $ cat > entrada
-´´´
+```
 
 * Lee información del teclado, hasta que se introduce una línea con END; copia todo al archivo entrada.
 
-´´´
+```
 $cat << END > entrada
-´´´
+```
 
 * Redirige la salida estándar del comando al archivo salida y la salida de error al archivo error.
 
-´´´
+```
 $ ls -l /bin/Bash /NoEsta > salida 2> error
-´´´
+```
 
 ## Gestión de usuarios y permiso de acceso
 
@@ -273,21 +273,21 @@ $ ls -l /bin/Bash /NoEsta > salida 2> error
 
 * El usuario adiserio quien es el propietario del archivo prueba tiene permiso para lectura, escritura y ejecución sobre el archivo. Los usuarios que pertenecen al grupo bioinf disponen de permisos para lectura y escritura. El resto de los usuarios del sistema solo pueden tienen permiso de lectura.
 
-´´´
+```
 -rwxrw-r-- 1 adiserio bioinf 4096 jun 30 19:30 prueba
-´´´
+```
 
 * El usuario adiserio, propietario del directorio Bio, tiene permiso para ver el contenido del directorio (lectura), crear o borrar archivos en el directorio Bio (escritura) y situarse dentro del directorio Bio (ejecución). En cambio, los usuarios pertenecientes al grupo bioinf pueden ver el contenido del directorio (lectura) e ingresar al mismo (ejecución), pero no pueden modificar su contenido. El resto de los usuarios solo pueden ver parcialmente la información del contenido del directorio (lectura), pero con mensajes que indican que no se disponen de los permisos necesarios.
 
-´´´
+```
 drwxr-xr-- 1 adiserio bioinf 4096 jun 30 19:30 Bio
-´´´
+```
 
 ## A practicar
 
 | Figura 6
 
-´´´
+```
 # Entrada estándar
 $cat/etc/passwd 
 $cat < /etc/passwd 
@@ -336,7 +336,7 @@ $> foo.txt
 $ls -l foo.txt 
 $chmod 600 foo.txt 
 $ls -l foo.txt
-´´´
+```
 
 
 
