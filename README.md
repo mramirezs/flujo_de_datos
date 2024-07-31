@@ -83,7 +83,7 @@ cd ~ # te lleva al directorio de inicio.
 
 ## 5. Redirección de Flujos de Datos
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+![Flujo de datos]([https://myoctocat.com/assets/images/base-octocat.svg](https://www.google.com/url?sa=i&url=https%3A%2F%2Flinuxhandbook.com%2Fredirection-linux%2F&psig=AOvVaw3_0pkXPSKnDK6NCQjBPRfB&ust=1722546420442000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCICu-M2X0ocDFQAAAAAdAAAAABAE))
 
 ### 5.1 Redirección de Salida Estándar
 
