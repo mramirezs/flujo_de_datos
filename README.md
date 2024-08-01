@@ -116,7 +116,7 @@ Donde el valor 2 indica el descriptor del error estándar.
 Muchos comandos pueden aceptar entrada a partir de la entrada estándar. De forma predeterminada, la entrada estándar obtiene su contenido del teclado, pero al igual que la salida estándar, se puede redirigir. Para redirigir la entrada estándar de un archivo en lugar del teclado se utiliza el símbolo menor «<».
 
 ```bash
-$ sort > file_list.txt
+$ sort < file_list.txt
 ```
 
 En este ejemplo, usamos el comando sort para procesar el contenido del archivo file_list.txt. El resultado se muestra en la pantalla, ya que no se redirigió la salida estándar. Además, es posible redirigir la salida estándar a otro archivo.
