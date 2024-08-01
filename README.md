@@ -75,11 +75,11 @@ cd ~ # te lleva al directorio de inicio.
 
 | Comando            | file1.txt | file2.txt | file33.txt | fileA.txt | fileC.zip | fileB.txt | Output.pdf |
 |--------------------|-----------|-----------|------------|-----------|-----------|-----------|------------|
-| $ ls file*         |           |           |            |           |           |           |            |
-| $ ls file?.txt     |           |           |            |           |           |           |            |
-| $ ls file[AC].???  |           |           |            |           |           |           |            |
-| $ ls file[A-C].??? |           |           |            |           |           |           |            |
-| $ ls *.*.txt       |           |           |            |           |           |           |            |
+| $ ls file*         |     X     |     X     |      X     |    X      |    X      |     X     |            |
+| $ ls file?.txt     |     X     |     X     |            |    X      |           |     X     |            |
+| $ ls file[AC].???  |           |           |            |    X      |    X      |           |            |
+| $ ls file[A-C].??? |           |           |            |    X      |    X      |     X     |            |
+| $ ls *.txt         |     X     |     X     |      X     |    X      |           |     X     |            |
 
 ## 5. Redirección de Flujos de Datos
 
