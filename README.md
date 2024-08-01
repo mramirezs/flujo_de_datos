@@ -163,7 +163,7 @@ $ comando1 || comando2 || comando3 ||...|| comandoN
 En el encadenamiento comando1 || comando2 || comando3, el comando2 se ejecutará solo si el comando 1 no fue exitoso e igualmente, comando3 se ejecutará si el comando2 no fue exitoso. Por ejemplo, supongamos que verificamos si el archivo miarchivo.txt existe, y si no existe, lo creamos. Para hacerlo, podemos ejecutar el siguiente comando:
 
 ```
-$ [-f ~/miarchivo.txt] || touch ~/miarchivo.txt 
+$ [ -f ~/miarchivo.txt ] || touch ~/miarchivo.txt 
 ```
 
 También podemos combinar varios operadores en el mismo comando. Por ejemplo, si el archivo miarchivo.txt existe, mostraremos un mensaje indicando que el archivo existe y en caso de que no exista, crearemos el archivo.
