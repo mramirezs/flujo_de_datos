@@ -310,7 +310,8 @@ $head –n 1 /etc/passwd > head_passwd
 $head –n 2 /etc/passwd >> head_passwd 
 
 # Error estándar
-$cat f20 $cat f20 2> error.log 
+$cat f20
+$cat f20 2> error.log 
 $cat f20 > salida.txt 2> error.log 
 $cat salida.txt 
 $cat error.log 
