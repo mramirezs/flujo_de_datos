@@ -301,7 +301,7 @@ drwxr-xr-- 1 adiserio bioinf 4096 jun 30 19:30 Bio
 
 ```bash
 # Entrada estándar
-$cat/etc/passwd 
+$cat /etc/passwd 
 $cat < /etc/passwd 
 
 # Salida estándar
